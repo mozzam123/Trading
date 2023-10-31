@@ -17,7 +17,7 @@
         
     <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/register.css' %}">
 
-    {% comment %} <script src="js/user/registration.js"></script>  {% endcomment %}
+    <script src="{% static 'accounts/js/register.js' %}"></script> 
 
 </head>
 
@@ -26,6 +26,7 @@
         <h1 class="text-success text-center">Registration Form</h1> <br>
         <br>
         <div class="col-lg-8 m-auto">
+            {% csrf_token %}
             <form id="myform" action="/registration" class="bg-light" method="post">
                 <div class="form-group">
                     <label for="first_name">Name</label>
