@@ -26,14 +26,16 @@
         <h1 class="text-success text-center">Registration Form</h1> <br>
         <br>
         <div class="col-lg-8 m-auto">
-            {% csrf_token %}
-            <form id="myform" action="/registration" class="bg-light" method="post">
+            <form id="myform" action="/register/" class="bg-light" method="post">
+                {% csrf_token %}
                 <div class="form-group">
-                    <label for="first_name">Name</label>
-                    <input type="text" class="form-control" value="" name="name" placeholder="">
+                    <label for="first_name">Username</label>
+                    <input type="text" class="form-control" value="" name="username" placeholder="">
                     <span id="name" class="text-danger font-weight-bold"></span>
-
                 </div>
+                {% if username_error %}
+                <p>{{username_error}}</p>
+                {% endif %}
 
                 <div class="form-group">
                     <label for="email">Email</label>
@@ -42,24 +44,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="number" maxlenght="10" class="form-control" value="" name="phone"
-                        pattern="[1-9]{1}[0-9]{9}" placeholder="">
-                    <span id="phone" class="text-danger font-weight-bold"></span>
-                </div>
-
-                <div class="form-group">
                     <label for="password">Password</label>
                     <input type="text" class="form-control" value="" name="password" placeholder="">
                     <span id="password" class="text-danger font-weight-bold"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="confirm_password">Confirm Password</label>
-                    <input type="text" class="form-control" value="" name="cpassword" placeholder="">
-                    <span id="confirm_password" class="text-danger font-weight-bold"></span>
-
-                </div>
+                </div>                
                 <br>
                 <button class="btn btn-primary" type="submit">Save</button></a>
             </form>
