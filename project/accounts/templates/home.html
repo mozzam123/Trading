@@ -73,8 +73,8 @@
             <!-- Add your data table here -->
             <table class="table">
               <thead>
-                  <tr>
-                    {% for field in fields %}
+                <tr>
+                  {% for field in fields %}
                   <th scope="col">{{field.verbose_name}}</th>
                   {% endfor %}
                 </tr>
@@ -84,7 +84,6 @@
                 <tr>
                   <th scope="row">{{ forloop.counter }}</th>
                   <td>{{ strategy.username }}</td>
-                  <td>{{ strategy.email }}</td>
                 </tr>
                 {% endfor %}
               </tbody>
