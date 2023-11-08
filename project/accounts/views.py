@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from .models import *
 
 
 def Register(request):
@@ -42,4 +43,6 @@ def Login(request):
 
 
 def home(request):
-    return render(request, 'home.html')
+    strategies = Strategy.objects.all()
+    fields = Strategy._meta.get_fields()
+    return render(request, 'home.html', {'strategies': strategies, "fields": fields})
