@@ -36,8 +36,9 @@ def Login(request):
             # Authentication failed
             print("Not loggedin")
             error_message = "Invalid username or password"
+            return render(request, 'login.html', {"error_message": error_message})
 
-    return render(request, 'login.html', {"error_message": error_message})
+    return render(request, 'login.html')
 
 
 def home(request):
