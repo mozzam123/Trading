@@ -46,4 +46,4 @@ def home(request):
     # strategies = Strategy.objects.values('id','username')
     strategies = Strategy.objects.all()
     fields = Strategy._meta.get_fields()
-    return render(request, 'home.html', {'strategies': strategies, "fields": fields})
+    return render(request, 'navbar.html', {'strategies': strategies, "fields": fields})
