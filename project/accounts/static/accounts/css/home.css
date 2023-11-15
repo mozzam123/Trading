@@ -1,6 +1,29 @@
-.divtable{
-    height: 400px;
-    width: 400px;
-    margin-left: 200px;
-    margin-top: 200px;
+.divtable {
+  height: 400px;
+  width: 400px;
+  margin-left: 200px;
+  margin-top: 200px;
+}
+
+.mytable {
+  width: 528px;
+  margin-left: 35px;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #0a0a0a; /* This sets a 1-pixel solid border with a light gray color */
+  padding: 8px; /* Add some padding to the table cells for better spacing */
+  text-align: left; /* Align text to the left within cells */
+}
+
+th {
+  background-color: #f2f2f2; /* Add a background color to header cells for better visibility */
+}
+
+.card-heading{
+    margin-left: 40%;
+    margin-top: 20px;
 }
