@@ -56,7 +56,7 @@ jQuery(document).ready(function($){
 	target.parent().addClass('active');
 });
 
-
+function loginPage
 
 
 // Add active class on another page linked
